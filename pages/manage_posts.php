@@ -81,11 +81,11 @@
                     ><i class="bi bi-eye"></i
                   ></a>
                   <a
-                    href="manage-posts-edit.php"
+                    href="/manage-posts-edit"
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
-                  <a href="#" class="btn btn-danger btn-sm"
+                  <a href="/#" class="btn btn-danger btn-sm"
                     ><i class="bi bi-trash"></i
                   ></a>
                 </div>
@@ -108,7 +108,7 @@
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
-                  <a href="#" class="btn btn-danger btn-sm"
+                  <a href="/#" class="btn btn-danger btn-sm"
                     ><i class="bi bi-trash"></i
                   ></a>
                 </div>
@@ -121,13 +121,13 @@
               <td class="text-end">
                 <div class="buttons">
                   <a
-                    href="post.php"
+                    href="/post"
                     target="_blank"
                     class="btn btn-primary btn-sm me-2"
                     ><i class="bi bi-eye"></i
                   ></a>
                   <a
-                    href="manage-posts-edit.php"
+                    href="/manage-posts-edit"
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
@@ -141,7 +141,7 @@
         </table>
       </div>
       <div class="text-center">
-        <a href="dashboard.php" class="btn btn-link btn-sm"
+        <a href="/dashboard" class="btn btn-link btn-sm"
           ><i class="bi bi-arrow-left"></i> Back to Dashboard</a
         >
       </div>

@@ -37,28 +37,28 @@ require "includes/functions.php";
     case '/logout':
       require 'pages/logout.php';
       break;
-    case '/manage_posts_add':
+    case '/manage-posts-add':
       require 'pages/manage_posts_add.php';
       break;
-    case '/manage_users_add':
+    case '/manage-users-add':
       require 'pages/manage_users_add.php';
       break;
-    case '/manage_users_changepwd':
+    case '/manage-users-changepwd':
       require 'pages/manage_users_changepwd.php';
       break;
     case '/dashboard':
       require 'pages/dashboard.php';
       break;
-    case '/manage_post_edit':
+    case '/manage-post-edit':
       require 'pages/manage_post_edit.php';
       break;
-    case '/manage_users_edit':
-      require 'pages/emanage_users_edit.php';
+    case '/manage-users-edit':
+      require 'pages/manage_users_edit.php';
       break;
-    case '/manage_posts':
+    case '/manage-posts':
       require 'pages/manage_posts.php';
       break;
-    case '/manage_users':
+    case '/manage-users':
       require 'pages/manage_users.php';
       break;
     case '/post':

@@ -16,7 +16,7 @@
                 Manage Posts
               </h5>
               <div class="text-center mt-3">
-                <a href="manage-posts.php" class="btn btn-primary btn-sm"
+                <a href="/manage-posts" class="btn btn-primary btn-sm"
                   >Access</a
                 >
               </div>
@@ -33,7 +33,7 @@
                 Manage Users
               </h5>
               <div class="text-center mt-3">
-                <a href="manage-users.php" class="btn btn-primary btn-sm"
+                <a href="/manage-users" class="btn btn-primary btn-sm"
                   >Access</a
                 >
               </div>
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="mt-4 text-center">
-        <a href="index.php" class="btn btn-link btn-sm"
+        <a href="/" class="btn btn-link btn-sm"
           ><i class="bi bi-arrow-left"></i> Back</a
         >
       </div>

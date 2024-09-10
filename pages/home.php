@@ -4,10 +4,8 @@ require 'parts/header.php';
 
 ?>
 
-<?php if ( isset( $_SESSION['user'] ) ) : ?>
 <div class="container mx-auto my-5" style="max-width: 500px;">
       <h1 class="h1 mb-4 text-center">My Blog</h1>
-      <h4>Welcome Back! <?= $_SESSION['user']['name']; ?></h4>
       <div class="card mb-2">
         <div class="card-body">
           <h5 class="card-title">Post 4</h5>
@@ -45,22 +43,18 @@ require 'parts/header.php';
         </div>
       </div>
     
-      <div class="d-flex justify-content-center">
-        <a href="/logout">Logout</a>
-      </div>
-      <?php else: ?>
-        <div class="card rounded shadow-sm mx-auto my-4" style="max-width: 500px">
-        <div class="card-body">
-          <h3 class="card-title mb-3">My Blog</h3>
-          <h4>Please Login To Continue</h4>
-          <?php if ( isset( $_SESSION['user'] ) ) : ?>
-        </div>
-        <?php else : ?>
-        <a href="/login">Login</a>
-        <a href="/signup">Sign Up</a>
-        <?php endif; ?>
-      </div>
-      <?php endif; ?>
+      <div class="mt-4 d-flex justify-content-center gap-3">
+    <?php if ( isset( $_SESSION['user'] ) ) : ?>
+        <!-- show dashboard and logout link if user is logged in -->
+        <a href="/dashboard" class="btn btn-link btn-sm">Dashboard</a>
+        <a href="/logout" class="btn btn-link btn-sm">Logout</a>
+    <?php else : ?>
+        <!-- show login and signup link if user is not logged in -->
+        <a href="/login" class="btn btn-link btn-sm">Login</a>
+        <a href="/signup" class="btn btn-link btn-sm">Sign Up</a>
+    <?php endif; ?>
+    </div>
+   </div>
     
     <?php
       require 'parts/footer.php';

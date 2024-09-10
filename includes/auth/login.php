@@ -1,8 +1,5 @@
 <?php
 
-// start session (we will be using session in this page)
-session_start();
-
 //connect to database
 $database = connectToDB();
 

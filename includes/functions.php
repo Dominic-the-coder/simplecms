@@ -18,3 +18,11 @@ $database = new PDO(
 return $database;
 
 }
+
+// set error message
+function setError( $error_message, $redirect_page ) {
+    $_SESSION["error"] = $error_message;
+    // redirect back to login page
+    header("Location: " . $redirect_page );
+    exit;
+}
