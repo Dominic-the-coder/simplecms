@@ -1,49 +1,47 @@
 <?php
   require 'parts/header.php';
   ?>
-    <div class="card rounded shadow-sm mx-auto my-4" style="max-width: 500px;">
-      <div class="card-body">
-        <h5 class="card-title text-center mb-3 py-3 border-bottom">
-          Login To Your Account
-        </h5>
+    <div class="container my-5 mx-auto" style="max-width: 500px;">
+      <h1 class="h1 mb-4 text-center">Login</h1>
 
-        <?php require 'parts/error_box.php' ?>
-
-        <?php if ( isset(  $_SESSION['error'] ) ) : ?>
-        <div class="alert alert-danger" role="alert">
-          <?= $_SESSION['error']; ?>
-          <?php
-              // remove error from $_SESSION after displaying it
-              unset( $_SESSION['error'] );
-          ?>
-        </div>
-        <?php endif; ?>
-      
-        <form action="/auth/login" method="POST">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" />
+      <div class="card p-4">
+        <form method="GET" action="dashboard.html">
+          <div class="mb-2">
+            <label for="email" class="visually-hidden">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder="email@example.com"
+            />
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
+          <div class="mb-2">
+            <label for="password" class="visually-hidden">Password</label>
             <input
               type="password"
               class="form-control"
               id="password"
-              name="password"
+              placeholder="Password"
             />
           </div>
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary btn-fu">Login</button>
+            <button type="submit" class="btn btn-primary">Login</button>
           </div>
         </form>
       </div>
-    </div>
-    <!-- Go back link -->
-    <div class="text-center">
-      <a href="index.php" class="text-decoration-none"
-        ><i class="bi bi-arrow-left-circle"></i> Go back</a
+
+      <!-- go back links -->
+      <div
+        class="d-flex justify-content-between align-items-center gap-3 mx-auto pt-3"
       >
+        <a href="index.html" class="text-decoration-none small"
+          ><i class="bi bi-arrow-left-circle"></i> Go back</a
+        >
+        <a href="signup.html" class="text-decoration-none small"
+          >Don't have an account? Sign up here
+          <i class="bi bi-arrow-right-circle"></i
+        ></a>
+      </div>
     </div>
 
     <?php
