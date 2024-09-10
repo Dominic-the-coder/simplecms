@@ -27,6 +27,12 @@ require "includes/functions.php";
     case '/auth/signup':
       require 'includes/auth/signup.php';
       break;
+  case '/user/add':
+      require 'includes/user/add.php';
+      break;
+    case '/user/delete':
+      require 'includes/user/delete.php';
+      break;
     //pages
     case '/login':
       require 'pages/login.php';
@@ -49,8 +55,8 @@ require "includes/functions.php";
     case '/dashboard':
       require 'pages/dashboard.php';
       break;
-    case '/manage-post-edit':
-      require 'pages/manage_post_edit.php';
+    case '/':
+      require 'pages/manage_posts_edit.php';
       break;
     case '/manage-users-edit':
       require 'pages/manage_users_edit.php';

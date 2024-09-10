@@ -29,13 +29,13 @@
               <td class="text-end">
                 <div class="buttons">
                   <a
-                    href="post.php"
+                    href=""
                     target="_blank"
                     class="btn btn-primary btn-sm me-2 disabled"
                     ><i class="bi bi-eye"></i
                   ></a>
                   <a
-                    href="manage-posts-edit.php"
+                    href=".php"
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
@@ -52,13 +52,13 @@
               <td class="text-end">
                 <div class="buttons">
                   <a
-                    href="post.php"
+                    href="/post"
                     target="_blank"
                     class="btn btn-primary btn-sm me-2"
                     ><i class="bi bi-eye"></i
                   ></a>
                   <a
-                    href="manage-posts-edit.php"
+                    href="/"
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
@@ -75,13 +75,13 @@
               <td class="text-end">
                 <div class="buttons">
                   <a
-                    href="post.php"
+                    href=""
                     target="_blank"
                     class="btn btn-primary btn-sm me-2"
                     ><i class="bi bi-eye"></i
                   ></a>
                   <a
-                    href="/manage-posts-edit"
+                    href="/"
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
@@ -98,13 +98,13 @@
               <td class="text-end">
                 <div class="buttons">
                   <a
-                    href="post.php"
+                    href="pos
                     target="_blank"
                     class="btn btn-primary btn-sm me-2"
                     ><i class="bi bi-eye"></i
                   ></a>
                   <a
-                    href="manage-posts-edit.php"
+                    href=".php"
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
@@ -127,7 +127,7 @@
                     ><i class="bi bi-eye"></i
                   ></a>
                   <a
-                    href="/manage-posts-edit"
+                    href="/"
                     class="btn btn-secondary btn-sm me-2"
                     ><i class="bi bi-pencil"></i
                   ></a>
