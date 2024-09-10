@@ -5,7 +5,7 @@
       <h1 class="h1 mb-4 text-center">Login</h1>
 
       <div class="card p-4">
-        <form method="GET" action="dashboard.html">
+        <form method="GET" action="dashboard.php">
           <div class="mb-2">
             <label for="email" class="visually-hidden">Email</label>
             <input
@@ -34,10 +34,10 @@
       <div
         class="d-flex justify-content-between align-items-center gap-3 mx-auto pt-3"
       >
-        <a href="index.html" class="text-decoration-none small"
+        <a href="index.php" class="text-decoration-none small"
           ><i class="bi bi-arrow-left-circle"></i> Go back</a
         >
-        <a href="signup.html" class="text-decoration-none small"
+        <a href="signup.php" class="text-decoration-none small"
           >Don't have an account? Sign up here
           <i class="bi bi-arrow-right-circle"></i
         ></a>
