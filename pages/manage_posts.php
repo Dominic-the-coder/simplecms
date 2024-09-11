@@ -1,4 +1,9 @@
 <?php
+
+// check if whoever that viewing this page is logged in.
+  // if not logged in, you want to redirect back to login page
+  checkIfuserIsNotLoggedIn();
+
    require 'parts/header.php';
 ?>
 

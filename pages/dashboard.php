@@ -1,10 +1,12 @@
-<?php
-   require 'parts/header.php';
-?>
+<?php 
+  // check if whoever that viewing this page is logged in.
+  // if not logged in, you want to redirect back to login page
+  checkIfuserIsNotLoggedIn();
 
-<body>
-    <div class="container mx-auto my-5" style="max-width: 800px;">
+require "parts/header.php"; ?>
+<div class="container mx-auto my-5" style="max-width: 800px;">
       <h1 class="h1 mb-4 text-center">Dashboard</h1>
+      <?php require "parts/success_message.php"; ?>
       <div class="row">
         <div class="col">
           <div class="card mb-2">
@@ -23,6 +25,7 @@
             </div>
           </div>
         </div>
+        <?php if ( $_SESSION['user']['role'] == 'admin' ) : ?>
         <div class="col">
           <div class="card mb-2">
             <div class="card-body">
@@ -40,6 +43,7 @@
             </div>
           </div>
         </div>
+      <?php endif; ?>
       </div>
       <div class="mt-4 text-center">
         <a href="/" class="btn btn-link btn-sm"
@@ -47,7 +51,4 @@
         >
       </div>
     </div>
-
-    <?php
-       require 'parts/footer.php';
-    ?>  
+    <?php require 'parts/footer.php';

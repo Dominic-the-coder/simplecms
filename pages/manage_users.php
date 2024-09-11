@@ -1,5 +1,11 @@
 <?php 
 
+// check if user is logged in or not
+checkIfuserIsNotLoggedIn();
+
+// check if the user is admin or not
+checkIfIsNotAdmin();
+
   // 1. connect to the database
   $database = connectToDB();
   
@@ -53,8 +59,8 @@
               </td>
               <td class="text-end">
                 <div class="buttons">
-                  <a href="/manage-users-edit" class="btn btn-success btn-sm me-2"><i class="bi bi-pencil"></i></a>
-                  <a href="/manage-users-changepwd" class="btn btn-warning btn-sm me-2"><i class="bi bi-key"></i></a>
+                  <a href="/manage-users-edit?id=<?= $user['id']; ?>" class="btn btn-success btn-sm me-2"><i class="bi bi-pencil"></i></a>
+                  <a href="/manage-users-changepwd?id=<?= $user['id']; ?>" class="btn btn-warning btn-sm me-2"><i class="bi bi-key"></i></a>
 
                   <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete-user-<?= $user['id']; ?>">
                     <i class="bi bi-trash"></i>

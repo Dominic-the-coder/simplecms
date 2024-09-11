@@ -17,6 +17,7 @@ require "includes/functions.php";
 
   // figure out the url the user is visiting
   $path = $_SERVER["REQUEST_URI"];
+  $path = parse_url( $path, PHP_URL_PATH ); 
 
   // once you figure out the path the user is visiting, load relevant content
   switch ( $path ){
@@ -27,11 +28,17 @@ require "includes/functions.php";
     case '/auth/signup':
       require 'includes/auth/signup.php';
       break;
-  case '/user/add':
+    case '/user/add':
       require 'includes/user/add.php';
       break;
     case '/user/delete':
       require 'includes/user/delete.php';
+      break;
+    case '/user/edit':
+      require 'includes/user/edit.php';
+      break;
+    case '/user/changepwd':
+      require 'includes/user/changepwd.php';
       break;
     //pages
     case '/login':

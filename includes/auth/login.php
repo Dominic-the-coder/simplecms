@@ -1,46 +1,43 @@
 <?php
 
-//connect to database
-$database = connectToDB();
+    $database = connectToDB();  
 
+    // get all the data from the form using $_POST
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
-// 3. get all the data from the login page form
-$email = $_POST['email'];
-$password = $_POST['password'];
-
-// 4. check for error (make sure all fields are filled)
-if ( empty( $email ) || empty( $password ) ) {
-    $_SESSION['error'] = "Please fill in all the fields!";
-    header("Location: /login");
-    exit;
-} else {
-     // 5. check if the email entered is in the system or not
-    // 5.1 sql command
-    $sql = "SELECT *FROM users WHERE email = :email";    
-    // 5.2 prepare
-    $query = $database->prepare($sql);
-    // 5.3 execute
-    $query->execute([
-        'email' => $email
-    ]);
-    // 5.4 fetch
-    $user = $query->fetch(); // return the first row of the list
-
-    // check if user exists
-    if ( $user ) {
-        // 6. check if the password is correct or not
-        if ( password_verify( $password, $user["password"] ) ) {
-            // 7. login the user(you want to store the data in the browser)
-            $_SESSION['user'] = $user;
-
-            // 8. redirect the user back to index.php
-            header("Location: /");
-                exit;
-        } else {
-            setError( "The password provided is incorrect, please try again.", '/login' );
-        }   
+    // error checking
+    if ( empty( $email ) || empty( $password ) ) {
+        setError( "All the fields are required.", "/login" );
     } else {
-        setError( "This email is not registered inside our database.", '/login' );
+        // retrieve the user data from your users table using the email provided by the user
+        //  sql command (recipe)
+        $sql = "SELECT * FROM users WHERE email = :email";
+        // prepare
+        $query = $database->prepare($sql);
+        // execute
+        $query->execute([
+            'email' => $email
+        ]);
+        // fetch 
+        $user = $query->fetch(); // get only one row of data
+
+        if ( $user ) {
+            // verify the password
+            if ( password_verify( $password, $user['password'] ) ) {
+                // if password is correct, login the user
+                $_SESSION['user'] = $user;
+
+                // set success message
+                $_SESSION["success"] = "Welcome back! How can I help you today?";
+
+                // redirect back to dashboard
+                header("Location: /dashboard");
+                exit;
+            } else {
+                setError( "The password provided is incorrect", "/login" );
+            }
+        } else {
+            setError( "The email provided does not exists", "/login" );
+        }
     }
-    
-}    
