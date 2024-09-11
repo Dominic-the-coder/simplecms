@@ -55,7 +55,7 @@ require "includes/functions.php";
     case '/dashboard':
       require 'pages/dashboard.php';
       break;
-    case '/':
+    case '/manage_posts_edit':
       require 'pages/manage_posts_edit.php';
       break;
     case '/manage-users-edit':
