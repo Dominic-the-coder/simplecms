@@ -62,18 +62,18 @@ checkIfuserIsNotLoggedIn();
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
             <select class="form-control" id="status" name="status">
-              <option value="">select an option</option>
+              <option value=""></option>
 
-              <?php if ( $user['status'] == 'publish' ) : ?>
+              <?php if ( $post['status'] == 'publish' ) : ?>
                 <option value="publish" selected>Publish</option>
               <?php else: ?>
-                <option value="pending">Pending Review</option>
+                <option value="publish">Publish</option>
               <?php endif; ?>
 
-              <?php if ( $user['status'] == 'pending' ) : ?>
+              <?php if ( $post['status'] == 'pending' ) : ?>
                 <option value="pending" selected>Pending Review</option>
               <?php else: ?>
-                <option value="publish">Publish</option>
+                <option value="pending">Pending Review</option>
               <?php endif; ?>
 
             </select>
