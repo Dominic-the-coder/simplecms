@@ -62,7 +62,6 @@ checkIfuserIsNotLoggedIn();
           <div class="mb-3">
             <label for="status" class="form-label">Status</label>
             <select class="form-control" id="status" name="status">
-              <option value=""></option>
 
               <?php if ( $post['status'] == 'publish' ) : ?>
                 <option value="publish" selected>Publish</option>
