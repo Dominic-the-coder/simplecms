@@ -8,7 +8,7 @@
     $id = $_POST['id'];
     // 3. do error checking - make sure all the fields are not empty
     if ( empty( $name ) || empty( $role ) ) {
-        setError( "Bro fill in everythin.", '/manage-users-edit' );
+        setError( "Bro fill in everything.", '/manage-users-edit?id=' . $id );
     }
     // 4. update the user data
     

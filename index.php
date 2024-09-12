@@ -28,6 +28,7 @@ require "includes/functions.php";
     case '/auth/signup':
       require 'includes/auth/signup.php';
       break;
+    //users  
     case '/user/add':
       require 'includes/user/add.php';
       break;
@@ -40,6 +41,19 @@ require "includes/functions.php";
     case '/user/changepwd':
       require 'includes/user/changepwd.php';
       break;
+    //posts
+    case '/post/add':
+      require 'includes/post/add.php';
+      break;
+    case '/post/delete':
+      require 'includes/post/delete.php';
+      break;
+    case '/post/edit':
+      require 'includes/post/edit.php';
+      break;
+    case '/post/view':
+      require 'includes/post/view.php';
+      break;  
     //pages
     case '/login':
       require 'pages/login.php';
@@ -62,7 +76,7 @@ require "includes/functions.php";
     case '/dashboard':
       require 'pages/dashboard.php';
       break;
-    case '/manage_posts_edit':
+    case '/manage-posts-edit':
       require 'pages/manage_posts_edit.php';
       break;
     case '/manage-users-edit':
